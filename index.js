@@ -4,7 +4,7 @@ function convertToCelsius(fahrenheit) {
 }
 
 function describeTemperature(fahrenheit) {
-  const celsius = convertToCelsius;
+  const celsius = convertToCelsius(fahrenheit);
   if (celsius < 0) {
     return "It's freezing!";
   } else if (celsius >= 0 && celsius < 20) {
@@ -14,12 +14,14 @@ function describeTemperature(fahrenheit) {
   } else if (celsius >= 30 && celsius < 40) {
     return "It's hot";
   } else celsius >= 40;
-  return "It's hot";
+  return "It's really hot";
 }
 
-const fahrenheitTemp = 75;
-const celsiusTemp = convertToCelsius;
-console.log(`${fahrenheitTemp} is ${celsiusTemp.tofixed(2)}`);
+const fahrenheitTemp = 32;
+const celsiusTemp = convertToCelsius(fahrenheitTemp);
+console.log(`${fahrenheitTemp} is ${celsiusTemp.toFixed(2)}`);
 
 const temperatureDescription = describeTemperature(fahrenheitTemp);
 console.log(`For ${fahrenheitTemp}, the weather is ${temperatureDescription}`);
+
+alert(`${fahrenheitTemp} is equivalent to ${celsiusTemp.toFixed(2)}`);
