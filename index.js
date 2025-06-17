@@ -17,7 +17,7 @@ function describeTemperature(fahrenheit) {
   return "It's really hot";
 }
 
-const fahrenheitTemp = 32;
+const fahrenheitTemp = 40;
 const celsiusTemp = convertToCelsius(fahrenheitTemp);
 console.log(`${fahrenheitTemp} is ${celsiusTemp.toFixed(2)}`);
 
